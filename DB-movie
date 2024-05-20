@@ -1,0 +1,24 @@
+create database movie;
+
+create table member(
+	id varchar(20) primary key
+    ,pwd varchar(20) not null
+    ,name varchar(20) not null
+    ,email varchar(50) not null
+    ,date date
+);
+
+
+CREATE TABLE m_list (
+    title VARCHAR(20) PRIMARY KEY,
+    genre VARCHAR(20),
+    date_m DATE
+);
+
+CREATE TABLE ticket (
+    ticketnumber INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(20),
+    userid VARCHAR(50),
+    date_t DATE,
+    FOREIGN KEY (title) REFERENCES m_list(title)
+);
