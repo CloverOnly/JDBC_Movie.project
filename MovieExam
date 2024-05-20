@@ -207,7 +207,7 @@ public class MovieExam {
 			try {
 				
 				String sql = "" + // "" + : 그냥 가독성을 위해 쓴다, 공백이 없으면 sql오류날수도 있어 쓴다.
-						"INSERT INTO m_movie( id, pwd, name, email, joinDate )"  +
+						"INSERT INTO member( id, pwd, name, email, joinDate )"  +
 						"VALUES( ?, ?, ?, ?,now())";
 				PreparedStatement pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, movie.getId());
@@ -365,5 +365,3 @@ public class MovieExam {
 		
 	}
 }
-
-미완성
