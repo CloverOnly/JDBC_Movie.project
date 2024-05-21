@@ -231,49 +231,6 @@ public class MovieExam {
 		}
 			
 	}
-//join the member--------------------회원가입-----------------------------------------------
-	public void member() {
-		Movie movie = new Movie(); 
-		System.out.println("[회원가입]"); 
-		System.out.print("아이디: "); 
-		movie.setId(scanner.nextLine()); 
-		System.out.print("비밀번호: ");
-		movie.setPwd(scanner.nextLine()); 
-		System.out.print("이름: "); 
-		movie.setName(scanner.nextLine()); 
-		System.out.print("email: "); 
-		movie.setEmail(scanner.nextLine());
-		
-		//보조메뉴 출력 
-		System.out.println("-----------------------------------------------------------------------"); 
-		System.out.println("가입하시겠습니까?: 1.Ok | 2.Cancel"); 
-		System.out.print("메뉴선택: "); 
-		
-		//nextLine(): 문자 또는 엔터를 치기 전까지의 문장 전체를 입력 받는다.
-		//				버퍼에 입력된 문자열을 개행 문자까지 다 가져온다.
-		String menuNo = scanner.nextLine();
-		//equals(): 두 문자열의 내용을 비교해서 동일한 값을 가지고 있는지 확인
-		if(menuNo.equals("1")) {
-			try {
-				//member 테이블에 값 저장
-				String sql = "" + // "" + : 그냥 가독성을 위해 쓴다, 공백이 없으면 sql오류날수도 있어 쓴다.
-						"INSERT INTO member( id, pwd, name, email, joinDate )"  +
-						"VALUES( ?, ?, ?, ?,now())";
-				PreparedStatement pstmt = conn.prepareStatement(sql);
-				pstmt.setString(1, movie.getId());
-				pstmt.setString(2, movie.getPwd());
-				pstmt.setString(3, movie.getName());
-				pstmt.setString(4, movie.getEmail());
-				pstmt.executeUpdate();
-				pstmt.close();
-			}catch(Exception e) {
-				e.printStackTrace();
-				exit();
-			}
-		}
-		
-		mainMenu();
-	}	
 //admit----------------------------관리자---------------------------------------------------
 	public void admit() {
 	
