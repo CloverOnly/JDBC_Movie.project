@@ -1,0 +1,74 @@
+2차 수정본
+
+package Movie;
+
+import java.util.Date;
+
+public class Movie {
+	private String id;
+	private String pwd;
+	private String name;
+	private String email;
+	private Date joinDate;
+	private String title;
+	private String genre;
+	private int ticketnumber;
+	private String userid;
+	
+	public String getUserid() {
+		return userid;
+	}
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+	public int getTicktnumber() {
+		return ticketnumber;
+	}
+	public void setTicktnumber(int ticktnumber) {
+		this.ticketnumber = ticktnumber;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Date getJoinDate() {
+		return joinDate;
+	}
+	public void setJoinDate(Date joinDate) {
+		this.joinDate = joinDate;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+	
+}
